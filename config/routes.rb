@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
 
+  get 'aa/ss'
+
+  get 'aa/dd'
+
   root 'lists#index'
   resources :lists
   resources :items
