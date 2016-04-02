@@ -1,0 +1,6 @@
+<% form_for @item, :url =>{:action => :create, :id => @list.id} do |f| -%>
+
+      Name:  <%= f.text_field :name %>
+
+      <%= f.submit "Add Item" %>
+<% end %>

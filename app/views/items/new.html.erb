@@ -1,0 +1,28 @@
+<%- model_class = Item -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model =>@list.category %></h1>
+</div>
+<%= render :partial => 'form' %>
+
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th><%= model_class.human_attribute_name(:list_id) %></th>
+    <th><%= model_class.human_attribute_name(:name) %></th>
+
+
+    <th><%=t '.actions', :default => t("helpers.actions") %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% for item in @list.items %>
+      <tr>
+        <td><%= item.list_id %></td>
+        <td><%= item.name %></td>
+
+
+      </tr>
+  <% end %>
+  </tbody>
+</table>
